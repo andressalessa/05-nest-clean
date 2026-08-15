@@ -1,10 +1,10 @@
-import { InMemoryAnswersRepository } from '@/test/repositories/in-memory-answers-repository.js';
-import { makeAnswer } from '@/test/factories/make-answer.js';
-import { EditAnswerUseCase } from './edit-answer.js';
-import { UniqueEntityID } from '@/core/entities/unique-entity-id.js';
-import { NotAllowedError } from '@/core/errors/errors/not-allowerd-error.js';
-import { InMemoryAnswerAttachmentRepository } from '@/test/repositories/in-memory-answer-attachments-repository.js';
-import { makeAnswerAttachment } from '@/test/factories/make-answer-attachment.js';
+import { InMemoryAnswersRepository } from '@/test/repositories/in-memory-answers-repository';
+import { makeAnswer } from '@/test/factories/make-answer';
+import { EditAnswerUseCase } from './edit-answer';
+import { UniqueEntityID } from '@/core/entities/unique-entity-id';
+import { NotAllowedError } from '@/core/errors/errors/not-allowerd-error';
+import { InMemoryAnswerAttachmentRepository } from '@/test/repositories/in-memory-answer-attachments-repository';
+import { makeAnswerAttachment } from '@/test/factories/make-answer-attachment';
 
 let inMemoryAnswerAttachmentsRepository: InMemoryAnswerAttachmentRepository;
 let inMemoryAnswersRepository: InMemoryAnswersRepository;

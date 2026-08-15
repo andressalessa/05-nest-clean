@@ -1,9 +1,9 @@
-import { UniqueEntityID } from '@/core/entities/unique-entity-id.js';
-import { Answer } from '../../enterprise/entities/answer.js';
-import type { AnswersRepository } from '../repositories/answers-repository.js';
-import { right, type Either } from '@/core/either.js';
-import { AnswerAttachment } from '../../enterprise/entities/answer-attachment.js';
-import { AnswerAttachmentList } from '../../enterprise/entities/answer-attachment-list.js';
+import { UniqueEntityID } from '@/core/entities/unique-entity-id';
+import { Answer } from '../../enterprise/entities/answer';
+import type { AnswersRepository } from '../repositories/answers-repository';
+import { right, type Either } from '@/core/either';
+import { AnswerAttachment } from '../../enterprise/entities/answer-attachment';
+import { AnswerAttachmentList } from '../../enterprise/entities/answer-attachment-list';
 
 interface AnswerQuestionUseCaseRequest {
   instructorId: string;

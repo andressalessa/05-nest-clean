@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/require-await */
-import type { PaginationParams } from '@/core/repositories/pagination-params.js';
-import type { QuestionCommentsRepository } from '@/domain/forum/application/repositories/question-comments-repository.js';
-import type { QuestionComment } from '@/domain/forum/enterprise/entities/question-comment.js';
+import type { PaginationParams } from '@/core/repositories/pagination-params';
+import type { QuestionCommentsRepository } from '@/domain/forum/application/repositories/question-comments-repository';
+import type { QuestionComment } from '@/domain/forum/enterprise/entities/question-comment';
 
 export class InMemoryQuestionCommentRepository implements QuestionCommentsRepository {
   public items: QuestionComment[] = [];

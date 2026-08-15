@@ -1,10 +1,10 @@
-import { InMemoryQuestionsRepository } from '@/test/repositories/in-memory-questions-repository.js';
-import { makeQuestion } from '@/test/factories/make-question.js';
-import { DeleteQuestionUseCase } from './delete-question.js';
-import { UniqueEntityID } from '@/core/entities/unique-entity-id.js';
-import { NotAllowedError } from '@/core/errors/errors/not-allowerd-error.js';
-import { InMemoryQuestionAttachmentRepository } from '@/test/repositories/in-memory-question-attachments-repository.js';
-import { makeQuestionAttachment } from '@/test/factories/make-question-attachment.js';
+import { InMemoryQuestionsRepository } from '@/test/repositories/in-memory-questions-repository';
+import { makeQuestion } from '@/test/factories/make-question';
+import { DeleteQuestionUseCase } from './delete-question';
+import { UniqueEntityID } from '@/core/entities/unique-entity-id';
+import { NotAllowedError } from '@/core/errors/errors/not-allowerd-error';
+import { InMemoryQuestionAttachmentRepository } from '@/test/repositories/in-memory-question-attachments-repository';
+import { makeQuestionAttachment } from '@/test/factories/make-question-attachment';
 
 let inMemoryQuestionsRepository: InMemoryQuestionsRepository;
 let inMemoryQuestionAttachmentsRepository: InMemoryQuestionAttachmentRepository;

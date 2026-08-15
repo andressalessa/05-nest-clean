@@ -1,8 +1,8 @@
-import { UniqueEntityID } from '@/core/entities/unique-entity-id.js';
+import { UniqueEntityID } from '@/core/entities/unique-entity-id';
 import {
   QuestionAttachment,
   type QuestionAttachmentProps,
-} from '@/domain/forum/enterprise/entities/question-attachment.js';
+} from '@/domain/forum/enterprise/entities/question-attachment';
 
 export function makeQuestionAttachment(
   // Partial transforma todos atributos de QuestionProps em opcionais

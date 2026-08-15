@@ -1,7 +1,7 @@
-import { InMemoryAnswersRepository } from '@/test/repositories/in-memory-answers-repository.js';
-import { AnswerQuestionUseCase } from './answer-question.js';
-import { UniqueEntityID } from '@/core/entities/unique-entity-id.js';
-import { InMemoryAnswerAttachmentRepository } from '@/test/repositories/in-memory-answer-attachments-repository.js';
+import { InMemoryAnswersRepository } from '@/test/repositories/in-memory-answers-repository';
+import { AnswerQuestionUseCase } from './answer-question';
+import { UniqueEntityID } from '@/core/entities/unique-entity-id';
+import { InMemoryAnswerAttachmentRepository } from '@/test/repositories/in-memory-answer-attachments-repository';
 
 let inMemoryAnswerAttachmentsRepository: InMemoryAnswerAttachmentRepository;
 let inMemoryAnswersRepository: InMemoryAnswersRepository;

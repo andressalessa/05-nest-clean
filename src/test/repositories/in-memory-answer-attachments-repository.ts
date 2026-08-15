@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
-import type { AnswerAttachmentsRepository } from '@/domain/forum/application/repositories/answer-attachments-repository.js';
-import type { AnswerAttachment } from '@/domain/forum/enterprise/entities/answer-attachment.js';
+import type { AnswerAttachmentsRepository } from '@/domain/forum/application/repositories/answer-attachments-repository';
+import type { AnswerAttachment } from '@/domain/forum/enterprise/entities/answer-attachment';
 
 export class InMemoryAnswerAttachmentRepository implements AnswerAttachmentsRepository {
   public items: AnswerAttachment[] = [];

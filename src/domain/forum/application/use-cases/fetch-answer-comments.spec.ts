@@ -1,7 +1,7 @@
-import { UniqueEntityID } from '@/core/entities/unique-entity-id.js';
-import { FetchAnswerCommentsUseCase } from './fetch-answer-comments.js';
-import { InMemoryAnswerCommentRepository } from '@/test/repositories/in-memory-answer-comment-repository.js';
-import { makeAnswerComment } from '@/test/factories/make-answer-comment.js';
+import { UniqueEntityID } from '@/core/entities/unique-entity-id';
+import { FetchAnswerCommentsUseCase } from './fetch-answer-comments';
+import { InMemoryAnswerCommentRepository } from '@/test/repositories/in-memory-answer-comment-repository';
+import { makeAnswerComment } from '@/test/factories/make-answer-comment';
 
 let inMemoryAnswerCommentsRepository: InMemoryAnswerCommentRepository;
 let fetchAnswerComments: FetchAnswerCommentsUseCase;

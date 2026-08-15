@@ -1,10 +1,10 @@
 import { faker } from '@faker-js/faker';
 
-import { UniqueEntityID } from '@/core/entities/unique-entity-id.js';
+import { UniqueEntityID } from '@/core/entities/unique-entity-id';
 import {
   QuestionComment,
   type QuestionCommentProps,
-} from '@/domain/forum/enterprise/entities/question-comment.js';
+} from '@/domain/forum/enterprise/entities/question-comment';
 
 export function makeQuestionComment(
   // Partial transforma todos atributos de QuestionProps em opcionais

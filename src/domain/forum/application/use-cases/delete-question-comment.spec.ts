@@ -1,7 +1,7 @@
-import { DeleteQuestionCommentUseCase } from './delete-question-comment.js';
-import { InMemoryQuestionCommentRepository } from '@/test/repositories/in-memory-question-comment-repository.js';
-import { makeQuestionComment } from '@/test/factories/make-question-comment.js';
-import { NotAllowedError } from '@/core/errors/errors/not-allowerd-error.js';
+import { DeleteQuestionCommentUseCase } from './delete-question-comment';
+import { InMemoryQuestionCommentRepository } from '@/test/repositories/in-memory-question-comment-repository';
+import { makeQuestionComment } from '@/test/factories/make-question-comment';
+import { NotAllowedError } from '@/core/errors/errors/not-allowerd-error';
 
 let inMemoryQuestionCommentsRepository: InMemoryQuestionCommentRepository;
 let deleteQuestionComment: DeleteQuestionCommentUseCase;

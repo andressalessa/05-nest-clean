@@ -1,7 +1,7 @@
-import { DeleteAnswerCommentUseCase } from './delete-answer-comment.js';
-import { InMemoryAnswerCommentRepository } from '@/test/repositories/in-memory-answer-comment-repository.js';
-import { makeAnswerComment } from '@/test/factories/make-answer-comment.js';
-import { NotAllowedError } from '@/core/errors/errors/not-allowerd-error.js';
+import { DeleteAnswerCommentUseCase } from './delete-answer-comment';
+import { InMemoryAnswerCommentRepository } from '@/test/repositories/in-memory-answer-comment-repository';
+import { makeAnswerComment } from '@/test/factories/make-answer-comment';
+import { NotAllowedError } from '@/core/errors/errors/not-allowerd-error';
 
 let inMemoryAnswerCommentsRepository: InMemoryAnswerCommentRepository;
 let deleteAnswerComment: DeleteAnswerCommentUseCase;

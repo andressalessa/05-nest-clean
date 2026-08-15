@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
-import type { QuestionAttachmentsRepository } from '@/domain/forum/application/repositories/question-attachments-repository.js';
-import type { QuestionAttachment } from '@/domain/forum/enterprise/entities/question-attachment.js';
+import type { QuestionAttachmentsRepository } from '@/domain/forum/application/repositories/question-attachments-repository';
+import type { QuestionAttachment } from '@/domain/forum/enterprise/entities/question-attachment';
 
 export class InMemoryQuestionAttachmentRepository implements QuestionAttachmentsRepository {
   public items: QuestionAttachment[] = [];

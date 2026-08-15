@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
-import type { NotificationsRepository } from '@/domain/notification/application/repositories/notifications-repository.js';
-import type { Notification } from '@/domain/notification/enterprise/entities/notification.js';
+import type { NotificationsRepository } from '@/domain/notification/application/repositories/notifications-repository';
+import type { Notification } from '@/domain/notification/enterprise/entities/notification';
 
 export class InMemoryNotificationsRepository implements NotificationsRepository {
   public items: Notification[] = [];
