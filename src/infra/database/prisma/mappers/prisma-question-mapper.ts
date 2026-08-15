@@ -1,0 +1,24 @@
+import { QuestionModel as PrismaQuestion } from '@/../prisma/generated/prisma/models/Question';
+import { UniqueEntityID } from '@/core/entities/unique-entity-id';
+import { Question } from '@/domain/forum/enterprise/entities/question';
+import { Slug } from '@/domain/forum/enterprise/entities/value-objects/slug';
+
+export class PrismaQuestionMapper {
+  static toDomain(raw: PrismaQuestion): Question {
+    return Question.create(
+      {
+        title: raw.title,
+        content: raw.content,
+        authorId: new UniqueEntityID(raw.authorId),
+        bestAnswerId: undefined,
+        slug: Slug.create(raw.slug),
+        createdAt: raw.createdAt,
+        updatedAt: raw.updatedAt,
+      },
+      new UniqueEntityID(raw.id),
+    );
+  }
+}
+
+// undefined -> inexistente | indefinido
+// null -> vazio | não preenchido

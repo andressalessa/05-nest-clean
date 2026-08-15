@@ -14,7 +14,11 @@ export interface QuestionProps {
   slug: Slug;
   attachments: QuestionAttachmentList;
   createdAt: Date;
-  updatedAt?: Date;
+  // O campo updatedAt:
+  // pode ser uma data (Date)
+  // pode ser null caso a Question já exista mas o campo está vazio (null)
+  // pode ser undefined caso esteja criando uma Question e nunca informei este campo (?)
+  updatedAt?: Date | null;
 }
 
 export class Question extends AggregateRoot<QuestionProps> {
