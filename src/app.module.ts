@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { ConfigModule } from '@nestjs/config'
+import { ConfigModule } from '@nestjs/config';
 import { PrismaService } from './prisma/prisma.service';
 import { CreateAccountController } from './controllers/create-account.controller';
 import { envSchema } from './env';
@@ -11,10 +11,10 @@ import { FetchRecentQuestionsController } from './controllers/fetch-recent-quest
 @Module({
   imports: [
     ConfigModule.forRoot({
-      validate: env => envSchema.parse(env),
+      validate: (env) => envSchema.parse(env),
       isGlobal: true,
     }),
-    AuthModule
+    AuthModule,
   ],
   controllers: [
     CreateAccountController,
@@ -24,4 +24,4 @@ import { FetchRecentQuestionsController } from './controllers/fetch-recent-quest
   ],
   providers: [PrismaService],
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,0 +1,27 @@
+import { InMemoryNotificationsRepository } from '@/test/repositories/in-memory-notification-repository.js';
+import { SendNotificationUseCase } from './send-notification.js';
+
+let inMemoryNotificationsRepository: InMemoryNotificationsRepository;
+let sendNotification: SendNotificationUseCase;
+
+describe('Send Notification', () => {
+  beforeEach(() => {
+    inMemoryNotificationsRepository = new InMemoryNotificationsRepository();
+    sendNotification = new SendNotificationUseCase(
+      inMemoryNotificationsRepository,
+    );
+  });
+
+  it('should be able to send an notification', async () => {
+    const result = await sendNotification.execute({
+      recipientId: '1',
+      title: 'Nova notificação',
+      content: 'Conteúdo da notificação',
+    });
+
+    expect(result.isRight()).toBe(true);
+    expect(inMemoryNotificationsRepository.items[0]).toEqual(
+      result.value?.notification,
+    );
+  });
+});
