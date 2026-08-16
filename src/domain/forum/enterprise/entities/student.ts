@@ -1,4 +1,5 @@
 import { Entity } from '@/core/entities/entity';
+import { UniqueEntityID } from '@/core/entities/unique-entity-id';
 
 export interface StudentProps {
   name: string;
@@ -19,8 +20,8 @@ export class Student extends Entity<StudentProps> {
     return this.props.password;
   }
 
-  static create(props: StudentProps) {
-    const student = new Student(props);
+  static create(props: StudentProps, id?: UniqueEntityID) {
+    const student = new Student(props, id);
 
     return student;
   }
