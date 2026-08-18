@@ -1,13 +1,13 @@
 import { AppModule } from '@/infra/app.module';
 import { DatabaseModule } from '@/infra/database/database.module';
-import { QuestionFactory } from '@/test/factories/make-question';
-import { StudentFactory } from '@/test/factories/make-student';
+import { QuestionFactory } from 'test/factories/make-question';
+import { StudentFactory } from 'test/factories/make-student';
 import { INestApplication } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { Test } from '@nestjs/testing';
 import request from 'supertest';
-import { AnswerFactory } from '@/test/factories/make-answer';
-import { AnswerCommentFactory } from '@/test/factories/make-answer-comment';
+import { AnswerFactory } from 'test/factories/make-answer';
+import { AnswerCommentFactory } from 'test/factories/make-answer-comment';
 
 describe('Fetch answer comments (E2E)', () => {
   let app: INestApplication;

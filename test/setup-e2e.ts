@@ -1,5 +1,5 @@
 import 'dotenv/config';
-import { PrismaClient } from '../../prisma/generated/prisma/client';
+import { PrismaClient } from '../prisma/generated/prisma/client';
 import { PrismaPg } from '@prisma/adapter-pg';
 import { randomUUID } from 'node:crypto';
 import { execSync } from 'node:child_process';

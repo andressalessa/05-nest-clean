@@ -1,6 +1,6 @@
 import { DeleteAnswerCommentUseCase } from './delete-answer-comment';
-import { InMemoryAnswerCommentRepository } from '@/test/repositories/in-memory-answer-comment-repository';
-import { makeAnswerComment } from '@/test/factories/make-answer-comment';
+import { InMemoryAnswerCommentRepository } from 'test/repositories/in-memory-answer-comment-repository';
+import { makeAnswerComment } from 'test/factories/make-answer-comment';
 import { NotAllowedError } from '@/core/errors/errors/not-allowerd-error';
 
 let inMemoryAnswerCommentsRepository: InMemoryAnswerCommentRepository;

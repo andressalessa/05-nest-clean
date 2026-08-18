@@ -1,9 +1,9 @@
 import { AppModule } from '@/infra/app.module';
 import { DatabaseModule } from '@/infra/database/database.module';
 import { PrismaService } from '@/infra/database/prisma/prisma.service';
-import { AnswerFactory } from '@/test/factories/make-answer';
-import { QuestionFactory } from '@/test/factories/make-question';
-import { StudentFactory } from '@/test/factories/make-student';
+import { AnswerFactory } from 'test/factories/make-answer';
+import { QuestionFactory } from 'test/factories/make-question';
+import { StudentFactory } from 'test/factories/make-student';
 import { INestApplication } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { Test } from '@nestjs/testing';
