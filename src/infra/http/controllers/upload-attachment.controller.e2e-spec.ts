@@ -5,7 +5,6 @@ import { INestApplication } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { Test } from '@nestjs/testing';
 import request from 'supertest';
-import { resolve } from 'node:path';
 
 describe('Upload attachment (E2E)', () => {
   let app: INestApplication;
