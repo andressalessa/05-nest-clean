@@ -40,3 +40,15 @@ Authorization: Bearer {{authToken}}
 GET {{baseUrl}}/questions?page=1
 Content-Type: application/json
 Authorization: Bearer {{authToken}}
+
+###
+
+# @name answer_question
+POST {{baseUrl}}/questions/b4d08123-b5d5-4bf0-92ff-c00424831d6d/answers
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+{
+    "content": "Nova resposta",
+    "authorId": "61d0029e-d02f-4e98-8a42-db07cf0f963a"
+}

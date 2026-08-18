@@ -20,7 +20,7 @@ describe('Answer Question', () => {
   it('should be able to create an question', async () => {
     const result = await answerQuestion.execute({
       questionId: '1',
-      instructorId: '1',
+      authorId: '1',
       content: 'Conteúdo da resposta',
       attachmentsIds: ['1', '2'],
     });
