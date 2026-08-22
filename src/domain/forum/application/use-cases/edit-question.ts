@@ -48,6 +48,7 @@ export class EditQuestionUseCase {
 
     const currentQuestionAttachments =
       await this.questionAttachmentsRepository.findManyByQuestionId(questionId);
+
     const questionAttachmentList = new QuestionAttachmentList(
       currentQuestionAttachments,
     );
@@ -59,7 +60,11 @@ export class EditQuestionUseCase {
       });
     });
 
+    // console.log(questionAttachments)
     questionAttachmentList.update(questionAttachments);
+    // console.log('---------------------------------------------------')
+    // console.log(questionAttachmentList)
+    // console.log('---------------------------------------------------')
 
     question.title = title;
     question.content = content;
