@@ -69,8 +69,14 @@ describe('Fetch question answers (E2E)', () => {
     expect(response.body).toEqual({
       // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
       answers: expect.arrayContaining([
-        expect.objectContaining({ content: 'Answer 01' }),
-        expect.objectContaining({ content: 'Answer 02' }),
+        expect.objectContaining({
+          content: 'Answer 01',
+          authorName: 'John Doe',
+        }),
+        expect.objectContaining({
+          content: 'Answer 02',
+          authorName: 'John Doe',
+        }),
       ]),
     });
   });
