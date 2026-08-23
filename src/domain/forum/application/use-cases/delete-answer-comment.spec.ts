@@ -2,13 +2,19 @@ import { DeleteAnswerCommentUseCase } from './delete-answer-comment';
 import { InMemoryAnswerCommentRepository } from 'test/repositories/in-memory-answer-comment-repository';
 import { makeAnswerComment } from 'test/factories/make-answer-comment';
 import { NotAllowedError } from '@/core/errors/errors/not-allowerd-error';
+import { InMemoryStudentsRepository } from 'test/repositories/in-memory-students-repository';
 
 let inMemoryAnswerCommentsRepository: InMemoryAnswerCommentRepository;
+let inMemoryStudentsRepository: InMemoryStudentsRepository;
+
 let deleteAnswerComment: DeleteAnswerCommentUseCase;
 
 describe('Delete Answer Comment', () => {
   beforeEach(() => {
-    inMemoryAnswerCommentsRepository = new InMemoryAnswerCommentRepository();
+    inMemoryStudentsRepository = new InMemoryStudentsRepository();
+    inMemoryAnswerCommentsRepository = new InMemoryAnswerCommentRepository(
+      inMemoryStudentsRepository,
+    );
     deleteAnswerComment = new DeleteAnswerCommentUseCase(
       inMemoryAnswerCommentsRepository,
     );

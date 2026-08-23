@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/require-await */
 import { DomainEvents } from '@/core/events/domain-events';
 import type { PaginationParams } from '@/core/repositories/pagination-params';
 import type { AnswerAttachmentsRepository } from '@/domain/forum/application/repositories/answer-attachments-repository';

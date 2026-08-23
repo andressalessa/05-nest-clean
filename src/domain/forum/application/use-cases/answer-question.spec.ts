@@ -2,17 +2,22 @@ import { InMemoryAnswersRepository } from 'test/repositories/in-memory-answers-r
 import { AnswerQuestionUseCase } from './answer-question';
 import { UniqueEntityID } from '@/core/entities/unique-entity-id';
 import { InMemoryAnswerAttachmentRepository } from 'test/repositories/in-memory-answer-attachments-repository';
+import { InMemoryStudentsRepository } from 'test/repositories/in-memory-students-repository';
 
 let inMemoryAnswerAttachmentsRepository: InMemoryAnswerAttachmentRepository;
 let inMemoryAnswersRepository: InMemoryAnswersRepository;
+let inMemoryStudentsRepository: InMemoryStudentsRepository;
+
 let answerQuestion: AnswerQuestionUseCase;
 
 describe('Answer Question', () => {
   beforeEach(() => {
     inMemoryAnswerAttachmentsRepository =
       new InMemoryAnswerAttachmentRepository();
+    inMemoryStudentsRepository = new InMemoryStudentsRepository();
     inMemoryAnswersRepository = new InMemoryAnswersRepository(
       inMemoryAnswerAttachmentsRepository,
+      inMemoryStudentsRepository,
     );
     answerQuestion = new AnswerQuestionUseCase(inMemoryAnswersRepository);
   });

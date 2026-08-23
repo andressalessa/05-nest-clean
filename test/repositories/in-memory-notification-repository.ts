@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/require-await */
 import type { NotificationsRepository } from '@/domain/notification/application/repositories/notifications-repository';
 import type { Notification } from '@/domain/notification/enterprise/entities/notification';
 

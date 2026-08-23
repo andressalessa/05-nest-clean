@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/require-await */
 import type { AnswerAttachmentsRepository } from '@/domain/forum/application/repositories/answer-attachments-repository';
 import type { AnswerAttachment } from '@/domain/forum/enterprise/entities/answer-attachment';
 

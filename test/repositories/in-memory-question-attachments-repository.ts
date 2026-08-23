@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/require-await */
 import type { QuestionAttachmentsRepository } from '@/domain/forum/application/repositories/question-attachments-repository';
 import type { QuestionAttachment } from '@/domain/forum/enterprise/entities/question-attachment';
 
