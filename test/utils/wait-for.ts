@@ -8,23 +8,24 @@
  * @param maxDuration Maximum wait time before rejecting
  */
 export async function waitFor(
-  assertions: () => void,
+  assertions: () => void | Promise<void>,
   maxDuration = 1000,
 ): Promise<void> {
   return new Promise((resolve, reject) => {
     let elapsedTime = 0;
 
-    const interval = setInterval(() => {
+    // eslint-disable-next-line @typescript-eslint/no-misused-promises
+    const interval = setInterval(async () => {
       elapsedTime += 10;
 
       try {
-        assertions();
+        await assertions();
         clearInterval(interval);
         resolve();
       } catch (err) {
         if (elapsedTime >= maxDuration) {
-          const error = err instanceof Error ? err : new Error(String(err));
-          reject(error);
+          // eslint-disable-next-line @typescript-eslint/prefer-promise-reject-errors
+          reject(err);
         }
       }
     }, 10);

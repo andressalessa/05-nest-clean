@@ -3,6 +3,7 @@ import { PrismaClient } from '../prisma/generated/prisma/client';
 import { PrismaPg } from '@prisma/adapter-pg';
 import { randomUUID } from 'node:crypto';
 import { execSync } from 'node:child_process';
+import { DomainEvents } from '@/core/events/domain-events';
 
 // this file will determine the charge of environment variables!
 
@@ -28,6 +29,9 @@ const schemaId = randomUUID();
 beforeAll(() => {
   const databaseURL = generateUniqueDatabaseURL(schemaId);
   process.env.DATABASE_URL = databaseURL;
+
+  DomainEvents.shouldRun = false;
+
   execSync('npx prisma migrate deploy');
 });
 

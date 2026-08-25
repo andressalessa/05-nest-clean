@@ -31,6 +31,8 @@ export default tseslint.config(
       '@typescript-eslint/no-explicit-any': 'off',
       '@typescript-eslint/no-floating-promises': 'warn',
       '@typescript-eslint/no-unsafe-argument': 'off',
+      // '@typescript-eslint/no-unsafe-assigment': 'off',
+      // '@typescript-eslint/no-unsafe-return': 'off',
       '@typescript-eslint/no-new': 'off',
       '@typescript-eslint/require-await': 'off',
       '@typescript-eslint/no-useless-constructor': 'off',
